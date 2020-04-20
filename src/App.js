@@ -8,10 +8,11 @@ import {fetchData} from './api'
 class App extends React.Component{
     state = {
         data: {},
+        country: '',
     }
     async componentDidMount() {
         const data = await fetchData();
-        this.setState({data : fetchData})
+        this.setState({ data})
     }
     render() {
         const  {data} = this.state;
