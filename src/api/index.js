@@ -1,11 +1,11 @@
 import axios from 'axios';
+// import { try } from 'q';
 
 const url = 'https://covid19.mathdro.id/api';
 
 export const fetchData  = async () => {
     try {
-        const {data} = await axios.get(url);
-        
+        const {data} = await axios.get(url);        
         const modifiedData = {
             confirmed: data.confirmed,
             recovered: data.recovered,
@@ -20,4 +20,14 @@ export const fetchData  = async () => {
 
     }
 
+}
+
+export const fetchDailyData = async () => {
+    try {
+        const  response  = await axios.get(`${url}/daily`);
+        // console.log(data);
+    }
+    catch (error) {
+        
+    }
 }
