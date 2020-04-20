@@ -1,5 +1,5 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+
 import {Cards , Charts , CountryPicker} from './components';
 import styles from './App.module.css';
 
@@ -19,8 +19,8 @@ class App extends React.Component{
         return (
             <div className = {styles.container}>
             <Cards data  = {data}/>
-            <Charts />
-            <CountryPicker />
+            {/* <Charts />
+            <CountryPicker /> */}
             </div>
         ) 
     }
